@@ -1,0 +1,63 @@
+===============================================
+    CREDENCIAIS DE ACESSO - BYTENEST
+===============================================
+
+📧 EMAIL: admin@bytenest.com
+🔑 SENHA: admin123
+
+✅ USUÁRIO VERIFICADO E FUNCIONANDO
+
+===============================================
+    INFORMAÇÕES DO SISTEMA
+===============================================
+
+🌐 URL de Acesso: http://127.0.0.1:8000/
+🔐 Login: http://127.0.0.1:8000/accounts/login/
+📊 Dashboard: http://127.0.0.1:8000/dashboard/
+⚙️ Admin Django: http://127.0.0.1:8000/admin/
+
+===============================================
+    COMO ACESSAR
+===============================================
+
+1. Inicie o servidor Django:
+   venv\Scripts\activate
+   python manage.py runserver
+
+2. Acesse: http://127.0.0.1:8000/accounts/login/
+
+3. Use as credenciais acima para fazer login
+
+4. Após o login, você será redirecionado para o dashboard
+
+===============================================
+    FUNCIONALIDADES DISPONÍVEIS
+===============================================
+
+✅ Login por email
+✅ Dashboard principal
+✅ Gerenciamento de projetos
+✅ Analytics e relatórios
+✅ Perfil do usuário
+✅ Configurações
+✅ Logout
+
+===============================================
+    OBSERVAÇÕES IMPORTANTES
+===============================================
+
+⚠️  Estas credenciais são para DESENVOLVIMENTO apenas
+⚠️  NÃO use em produção
+⚠️  A senha é simples para facilitar testes
+⚠️  Em produção, use senhas seguras
+
+===============================================
+    SUPORTE
+===============================================
+
+Se precisar de ajuda ou tiver dúvidas:
+- Verifique se o servidor está rodando
+- Confirme se as migrações foram aplicadas
+- Teste o acesso ao admin Django
+
+===============================================

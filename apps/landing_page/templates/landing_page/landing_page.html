@@ -1,0 +1,714 @@
+{% extends 'base.html' %}
+
+{% block title %}ByteNest - Transforme Seu Negócio com Tecnologia{% endblock %}
+
+{% block meta_description %}Descubra como a ByteNest pode revolucionar seu negócio com soluções tecnológicas inovadoras. Desenvolvimento web, apps mobile, automação e muito mais.{% endblock %}
+
+{% block content %}
+<!-- Navigation -->
+<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <div class="flex items-center">
+        <div class="flex-shrink-0">
+          <h1 class="text-2xl font-bold gradient-text">ByteNest</h1>
+        </div>
+      </div>
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-4">
+          <a href="#servicos" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Serviços</a>
+          <a href="#sobre" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Sobre</a>
+          <a href="#contato" class="text-gray-700 hover:text-purple-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">Contato</a>
+          <a href="#contato" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover-scale">Começar Agora</a>
+        </div>
+      </div>
+      <div class="md:hidden">
+        <button class="text-gray-700 hover:text-purple-600 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-20 pb-16 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-on-scroll">
+        Transforme Seu <span class="gradient-text">Negócio</span><br>
+        com Tecnologia
+      </h1>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto animate-on-scroll">
+        Desenvolvemos soluções tecnológicas personalizadas e oferecemos terceirização completa de TI. 
+        Da ideia à implementação, cuidamos de toda a infraestrutura tecnológica da sua empresa.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
+        <a href="#contato" class="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 hover-scale">
+          <i class="fas fa-rocket mr-2"></i>
+          Começar Projeto
+        </a>
+        <a href="#servicos" class="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-purple-600 hover:text-white transition-all duration-300">
+          <i class="fas fa-play mr-2"></i>
+          Ver Serviços
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-bold text-purple-600 mb-2">100+</div>
+        <div class="text-gray-600">Projetos Entregues</div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-bold text-blue-600 mb-2">50+</div>
+        <div class="text-gray-600">Clientes Satisfeitos</div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-bold text-green-600 mb-2">15+</div>
+        <div class="text-gray-600">Empresas com TI Terceirizada</div>
+      </div>
+      <div class="animate-on-scroll">
+        <div class="text-4xl font-bold text-orange-600 mb-2">24/7</div>
+        <div class="text-gray-600">Suporte Técnico</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section id="servicos" class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+        Nossos <span class="gradient-text">Serviços</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
+        Oferecemos soluções completas em tecnologia para impulsionar seu negócio
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+          <i class="fas fa-code text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Desenvolvimento Web</h3>
+        <p class="text-gray-600 mb-6">Sites e aplicações web modernas, responsivas e otimizadas para conversão.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Design Responsivo</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>SEO Otimizado</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Performance</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6">
+          <i class="fas fa-mobile-alt text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Apps Mobile</h3>
+        <p class="text-gray-600 mb-6">Aplicativos nativos e híbridos para iOS e Android com UX excepcional.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li><i class="fas fa-check text-green-500 mr-2"></i>iOS & Android</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>UX/UI Design</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Performance</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6">
+          <i class="fas fa-cogs text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Automação</h3>
+        <p class="text-gray-600 mb-6">Automatize processos e aumente a eficiência do seu negócio.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Workflows</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Integrações</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Analytics</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6">
+          <i class="fas fa-cloud text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Cloud Solutions</h3>
+        <p class="text-gray-600 mb-6">Migração e gerenciamento de infraestrutura na nuvem.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li><i class="fas fa-check text-green-500 mr-2"></i>AWS & Azure</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Escalabilidade</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Segurança</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+          <i class="fas fa-chart-line text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Analytics & BI</h3>
+        <p class="text-gray-600 mb-6">Transforme dados em insights acionáveis para seu negócio.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Dashboards</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Relatórios</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>KPIs</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+          <i class="fas fa-shield-alt text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Cybersecurity</h3>
+        <p class="text-gray-600 mb-6">Proteja seus dados e sistemas com as melhores práticas de segurança.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Auditoria</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Monitoramento</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Compliance</li>
+        </ul>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-on-scroll">
+        <div class="w-16 h-16 bg-gradient-to-r from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mb-6">
+          <i class="fas fa-users-cog text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Terceirização de TI</h3>
+        <p class="text-gray-600 mb-6">Cuidamos de toda a infraestrutura de TI da sua empresa, incluindo suporte presencial.</p>
+        <ul class="text-sm text-gray-500 space-y-2">
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Suporte Presencial</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Infraestrutura Completa</li>
+          <li><i class="fas fa-check text-green-500 mr-2"></i>Equipe Dedicada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IT Outsourcing Section -->
+<section class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+        <span class="gradient-text">Terceirização de TI</span> Completa
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto animate-on-scroll">
+        Cuidamos de toda a infraestrutura de TI da sua empresa, desde a manutenção até o suporte presencial
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-on-scroll">
+        <div class="space-y-8">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-teal-500 to-teal-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-user-tie text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Suporte Presencial</h3>
+              <p class="text-gray-600">Colocamos profissionais especializados no local da sua empresa para atendimento direto e personalizado.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-server text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Infraestrutura Completa</h3>
+              <p class="text-gray-600">Gerenciamos servidores, redes, segurança e toda a infraestrutura tecnológica da sua empresa.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-headset text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Suporte 24/7</h3>
+              <p class="text-gray-600">Atendimento contínuo para garantir que sua operação nunca pare por problemas técnicos.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-chart-line text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Redução de Custos</h3>
+              <p class="text-gray-600">Elimine a necessidade de contratar uma equipe interna de TI e reduza custos operacionais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="animate-on-scroll">
+        <div class="bg-white p-8 rounded-3xl shadow-xl">
+          <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">O que incluímos:</h3>
+          <div class="grid grid-cols-1 gap-4">
+            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+              <i class="fas fa-check-circle text-green-500 mr-3"></i>
+              <span class="text-gray-700">Manutenção de servidores e equipamentos</span>
+            </div>
+            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+              <i class="fas fa-check-circle text-green-500 mr-3"></i>
+              <span class="text-gray-700">Suporte técnico presencial e remoto</span>
+            </div>
+            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+              <i class="fas fa-check-circle text-green-500 mr-3"></i>
+              <span class="text-gray-700">Gestão de segurança e backup</span>
+            </div>
+            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+              <i class="fas fa-check-circle text-green-500 mr-3"></i>
+              <span class="text-gray-700">Monitoramento 24/7</span>
+            </div>
+            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+              <i class="fas fa-check-circle text-green-500 mr-3"></i>
+              <span class="text-gray-700">Atualizações e upgrades</span>
+            </div>
+            <div class="flex items-center p-4 bg-gray-50 rounded-lg">
+              <i class="fas fa-check-circle text-green-500 mr-3"></i>
+              <span class="text-gray-700">Consultoria estratégica em TI</span>
+            </div>
+          </div>
+          
+          <div class="mt-8 text-center">
+            <a href="#contato" class="bg-gradient-to-r from-teal-600 to-blue-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover-scale">
+              <i class="fas fa-phone mr-2"></i>
+              Solicitar Proposta
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="sobre" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="animate-on-scroll">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Por que escolher a <span class="gradient-text">ByteNest</span>?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8">
+          Somos uma empresa de tecnologia focada em resultados. Nossa missão é transformar 
+          ideias em soluções digitais que realmente fazem a diferença no seu negócio.
+        </p>
+        
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-lightbulb text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Inovação Constante</h3>
+              <p class="text-gray-600">Utilizamos as tecnologias mais modernas e tendências do mercado.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-users text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Equipe Especializada</h3>
+              <p class="text-gray-600">Profissionais experientes e apaixonados por tecnologia.</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-clock text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Entrega Rápida</h3>
+              <p class="text-gray-600">Metodologia ágil para entregas no prazo e com qualidade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="animate-on-scroll">
+        <div class="relative">
+          <div class="bg-gradient-to-br from-purple-100 to-blue-100 rounded-3xl p-8">
+            <div class="grid grid-cols-2 gap-6">
+              <div class="text-center">
+                <div class="text-3xl font-bold text-purple-600 mb-2">98%</div>
+                <div class="text-sm text-gray-600">Satisfação do Cliente</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-blue-600 mb-2">15 dias</div>
+                <div class="text-sm text-gray-600">Tempo Médio de Entrega</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
+                <div class="text-sm text-gray-600">Suporte Disponível</div>
+              </div>
+              <div class="text-center">
+                <div class="text-3xl font-bold text-orange-600 mb-2">100%</div>
+                <div class="text-sm text-gray-600">Projetos no Prazo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+        O que nossos <span class="gradient-text">clientes</span> dizem
+      </h2>
+      <p class="text-xl text-gray-600 animate-on-scroll">Depoimentos de quem já transformou seu negócio conosco</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow-lg animate-on-scroll">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-6">
+          "A ByteNest transformou completamente nossa presença digital. O site que desenvolveram 
+          aumentou nossas vendas em 300% em apenas 3 meses."
+        </p>
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">MC</span>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900">Maria Costa</div>
+            <div class="text-sm text-gray-500">CEO, TechStart</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg animate-on-scroll">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-6">
+          "Profissionais excepcionais! O app que criaram para nossa empresa revolucionou 
+          nosso atendimento ao cliente. Recomendo de olhos fechados."
+        </p>
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">JS</span>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900">João Silva</div>
+            <div class="text-sm text-gray-500">Diretor, InovaçãoCorp</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg animate-on-scroll">
+        <div class="flex items-center mb-4">
+          <div class="flex text-yellow-400">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <p class="text-gray-600 mb-6">
+          "A automação que implementaram economizou 20 horas por semana da nossa equipe. 
+          ROI incrível e suporte técnico impecável."
+        </p>
+        <div class="flex items-center">
+          <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
+            <span class="text-white font-bold">AS</span>
+          </div>
+          <div>
+            <div class="font-semibold text-gray-900">Ana Santos</div>
+            <div class="text-sm text-gray-500">Gerente, EficiênciaMax</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 gradient-bg">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 animate-on-scroll">
+      Pronto para transformar seu negócio?
+    </h2>
+    <p class="text-xl text-white/90 mb-8 animate-on-scroll">
+      Entre em contato conosco hoje mesmo e descubra como podemos ajudar seu negócio a crescer.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center animate-on-scroll">
+      <a href="#contato" class="bg-white text-purple-600 px-8 py-4 rounded-full text-lg font-semibold hover:shadow-xl transition-all duration-300 hover-scale">
+        <i class="fas fa-phone mr-2"></i>
+        Falar com Especialista
+      </a>
+      <a href="#contato" class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
+        <i class="fas fa-envelope mr-2"></i>
+        Solicitar Orçamento
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contato" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 animate-on-scroll">
+        Vamos <span class="gradient-text">conversar</span>
+      </h2>
+      <p class="text-xl text-gray-600 animate-on-scroll">Entre em contato e vamos transformar sua ideia em realidade</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="animate-on-scroll">
+        <div class="space-y-8">
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-map-marker-alt text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Endereço</h3>
+              <p class="text-gray-600">São Paulo, SP - Brasil</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-phone text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Telefone</h3>
+              <p class="text-gray-600">+55 (11) 99999-9999</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-envelope text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
+              <p class="text-gray-600">contato@bytenest.com.br</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start">
+            <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+              <i class="fas fa-clock text-white"></i>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">Horário de Atendimento</h3>
+              <p class="text-gray-600">Segunda a Sexta: 9h às 18h</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="animate-on-scroll">
+        <form id="contactForm" class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Nome *</label>
+              <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Seu nome completo">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+              <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="seu@email.com">
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Empresa</label>
+            <input type="text" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Nome da sua empresa">
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Serviço de Interesse</label>
+            <select name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+              <option value="">Selecione um serviço</option>
+              <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+              <option value="Apps Mobile">Apps Mobile</option>
+              <option value="Automação">Automação</option>
+              <option value="Cloud Solutions">Cloud Solutions</option>
+              <option value="Analytics & BI">Analytics & BI</option>
+              <option value="Cybersecurity">Cybersecurity</option>
+              <option value="Terceirização de TI">Terceirização de TI</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Mensagem *</label>
+            <textarea name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Conte-nos sobre seu projeto..."></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:shadow-xl transition-all duration-300 hover-scale">
+            <i class="fas fa-paper-plane mr-2"></i>
+            <span id="submitText">Enviar Mensagem</span>
+          </button>
+          <div id="formMessage" class="hidden p-4 rounded-lg text-center"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold gradient-text mb-4">ByteNest</h3>
+        <p class="text-gray-400 mb-4">
+          Transformando ideias em soluções tecnológicas inovadoras.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-linkedin text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-twitter text-xl"></i>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Serviços</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white transition-colors">Desenvolvimento Web</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Apps Mobile</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Automação</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Cloud Solutions</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Terceirização de TI</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Empresa</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><a href="#" class="hover:text-white transition-colors">Sobre Nós</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Equipe</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Carreiras</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contato</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><i class="fas fa-phone mr-2"></i>+55 (11) 99999-9999</li>
+          <li><i class="fas fa-envelope mr-2"></i>contato@bytenest.com.br</li>
+          <li><i class="fas fa-map-marker-alt mr-2"></i>São Paulo, SP</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+      <p>&copy; 2024 ByteNest. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Contact form handling
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const submitBtn = document.getElementById('submitBtn');
+  const submitText = document.getElementById('submitText');
+  const formMessage = document.getElementById('formMessage');
+  
+  // Get form data
+  const formData = new FormData(this);
+  const data = {
+    name: formData.get('name'),
+    email: formData.get('email'),
+    company: formData.get('company'),
+    service: formData.get('service'),
+    message: formData.get('message')
+  };
+  
+  // Show loading state
+  submitBtn.disabled = true;
+  submitText.textContent = 'Enviando...';
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i><span>Enviando...</span>';
+  
+  try {
+    const response = await fetch('/contato/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]')?.value || ''
+      },
+      body: JSON.stringify(data)
+    });
+    
+    const result = await response.json();
+    
+    if (result.success) {
+      formMessage.className = 'p-4 rounded-lg text-center bg-green-100 text-green-800 border border-green-200';
+      formMessage.textContent = result.message;
+      formMessage.classList.remove('hidden');
+      this.reset();
+    } else {
+      formMessage.className = 'p-4 rounded-lg text-center bg-red-100 text-red-800 border border-red-200';
+      formMessage.textContent = result.message;
+      formMessage.classList.remove('hidden');
+    }
+  } catch (error) {
+    formMessage.className = 'p-4 rounded-lg text-center bg-red-100 text-red-800 border border-red-200';
+    formMessage.textContent = 'Erro ao enviar mensagem. Tente novamente.';
+    formMessage.classList.remove('hidden');
+  } finally {
+    // Reset button state
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i><span>Enviar Mensagem</span>';
+  }
+});
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileMenuBtn = document.querySelector('.md\\:hidden button');
+  const mobileMenu = document.createElement('div');
+  mobileMenu.className = 'md:hidden bg-white border-t border-gray-200 hidden';
+  mobileMenu.innerHTML = `
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="#servicos" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Serviços</a>
+      <a href="#sobre" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Sobre</a>
+      <a href="#contato" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Contato</a>
+      <a href="#contato" class="block px-3 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-md mx-3 text-center">Começar Agora</a>
+    </div>
+  `;
+  
+  if (mobileMenuBtn) {
+    mobileMenuBtn.parentNode.parentNode.appendChild(mobileMenu);
+    
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+});
+</script>
+{% endblock %}
