@@ -80,11 +80,15 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 # Database configuration
-# Using SQLite for local development
+# Using PostgreSQL for production/containerized development
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME', default='bytenest'),
+        'USER': config('DB_USER', default='bytenest'),
+        'PASSWORD': config('DB_PASSWORD', default='bytenest123'),
+        'HOST': config('DB_HOST', default='bytenest_db'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
 

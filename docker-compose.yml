@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  bytenest_web:
+    build: .
+    container_name: bytenest_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_NAME=bytenest
+      - DB_USER=bytenest
+      - DB_PASSWORD=bytenest123
+      - DB_HOST=bytenest_db
+      - DB_PORT=5432
+    depends_on:
+      - bytenest_db
+
+  bytenest_db:
+    image: postgres:14
+    container_name: bytenest_db
+    restart: always
+    environment:
+      POSTGRES_DB: bytenest
+      POSTGRES_USER: bytenest
+      POSTGRES_PASSWORD: bytenest123
+    volumes:
+      - bytenest_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  bytenest_postgres_data:
