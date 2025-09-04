@@ -23,9 +23,19 @@
         </div>
       </div>
       <div class="md:hidden">
-        <button class="text-gray-700 hover:text-purple-600 focus:outline-none">
+        <button id="mobile-menu-button" class="text-gray-700 hover:text-purple-600 focus:outline-none">
           <i class="fas fa-bars text-xl"></i>
         </button>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-200 hidden">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <a href="#servicos" class="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md">Serviços</a>
+        <a href="#sobre" class="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md">Sobre</a>
+        <a href="#contato" class="block px-3 py-2 text-gray-700 hover:text-purple-600 hover:bg-gray-50 rounded-md">Contato</a>
+        <a href="#contato" class="block px-3 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-md mx-3 text-center hover:shadow-lg transition-all duration-300">Começar Agora</a>
       </div>
     </div>
   </div>
@@ -486,22 +496,12 @@
       <div class="animate-on-scroll">
         <div class="space-y-8">
           <div class="flex items-start">
-            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-              <i class="fas fa-map-marker-alt text-white"></i>
-            </div>
-            <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Endereço</h3>
-              <p class="text-gray-600">São Paulo, SP - Brasil</p>
-            </div>
-          </div>
-          
-          <div class="flex items-start">
             <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-              <i class="fas fa-phone text-white"></i>
+              <i class="fab fa-whatsapp text-white"></i>
             </div>
             <div>
-              <h3 class="text-lg font-semibold text-gray-900 mb-2">Telefone</h3>
-              <p class="text-gray-600">+55 (11) 99999-9999</p>
+              <h3 class="text-lg font-semibold text-gray-900 mb-2">WhatsApp</h3>
+              <p class="text-gray-600">31 97322-8961</p>
             </div>
           </div>
           
@@ -511,7 +511,7 @@
             </div>
             <div>
               <h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-              <p class="text-gray-600">contato@bytenest.com.br</p>
+              <p class="text-gray-600">contato@bytenestti.com.br</p>
             </div>
           </div>
           
@@ -618,9 +618,8 @@
       <div>
         <h4 class="text-lg font-semibold mb-4">Contato</h4>
         <ul class="space-y-2 text-gray-400">
-          <li><i class="fas fa-phone mr-2"></i>+55 (11) 99999-9999</li>
-          <li><i class="fas fa-envelope mr-2"></i>contato@bytenest.com.br</li>
-          <li><i class="fas fa-map-marker-alt mr-2"></i>São Paulo, SP</li>
+          <li><i class="fab fa-whatsapp mr-2"></i>31 97322-8961</li>
+          <li><i class="fas fa-envelope mr-2"></i>contato@bytenestti.com.br</li>
         </ul>
       </div>
     </div>
@@ -690,25 +689,60 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
-  const mobileMenuBtn = document.querySelector('.md\\:hidden button');
-  const mobileMenu = document.createElement('div');
-  mobileMenu.className = 'md:hidden bg-white border-t border-gray-200 hidden';
-  mobileMenu.innerHTML = `
-    <div class="px-2 pt-2 pb-3 space-y-1">
-      <a href="#servicos" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Serviços</a>
-      <a href="#sobre" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Sobre</a>
-      <a href="#contato" class="block px-3 py-2 text-gray-700 hover:text-purple-600">Contato</a>
-      <a href="#contato" class="block px-3 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-md mx-3 text-center">Começar Agora</a>
-    </div>
-  `;
+  const mobileMenuBtn = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
   
-  if (mobileMenuBtn) {
-    mobileMenuBtn.parentNode.parentNode.appendChild(mobileMenu);
-    
+  if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', function() {
       mobileMenu.classList.toggle('hidden');
+      
+      // Toggle icon between bars and X
+      const icon = mobileMenuBtn.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.className = 'fas fa-bars text-xl';
+      } else {
+        icon.className = 'fas fa-times text-xl';
+      }
+    });
+    
+    // Close menu when clicking on links
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        const icon = mobileMenuBtn.querySelector('i');
+        icon.className = 'fas fa-bars text-xl';
+      });
     });
   }
 });
+
+// WhatsApp floating button
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappButton = document.createElement('a');
+  whatsappButton.href = 'https://wa.me/5531973228961?text=Olá! Gostaria de saber mais sobre os serviços da ByteNest.';
+  whatsappButton.target = '_blank';
+  whatsappButton.className = 'fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover-scale';
+  whatsappButton.innerHTML = '<i class="fab fa-whatsapp text-4xl"></i>';
+  whatsappButton.title = 'Fale conosco no WhatsApp';
+  
+  // Add hover effect
+  whatsappButton.addEventListener('mouseenter', function() {
+    this.style.transform = 'scale(1.1)';
+  });
+  
+  whatsappButton.addEventListener('mouseleave', function() {
+    this.style.transform = 'scale(1)';
+  });
+  
+  document.body.appendChild(whatsappButton);
+});
 </script>
+
+<!-- WhatsApp Floating Button -->
+<style>
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+</style>
 {% endblock %}
