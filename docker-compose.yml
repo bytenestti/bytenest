@@ -1,33 +1,104 @@
 version: '3.9'
 
-services:
-  bytenest_web:
-    build: .
-    container_name: bytenest_web
-    command: python manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/app
-    ports:
-      - "8000:8000"
-    environment:
-      - DB_NAME=bytenest
-      - DB_USER=bytenest
-      - DB_PASSWORD=bytenest123
-      - DB_HOST=bytenest_db
-      - DB_PORT=5432
-    depends_on:
-      - bytenest_db
+networks:
+  web:
+    external: true
+  internal:
+    driver: bridge
 
-  bytenest_db:
-    image: postgres:14
-    container_name: bytenest_db
+services:
+
+  traefik:
+    image: traefik:v2.12
+    container_name: traefik
+    restart: always
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
+      - "--entrypoints.websecure.address=:443"
+      - "--certificatesresolvers.letsencrypt.acme.email=seuemail@dominio.com"
+      - "--certificatesresolvers.letsencrypt.acme.storage=/acme.json"
+      - "--certificatesresolvers.letsencrypt.acme.httpchallenge.entrypoint=web"
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./acme.json:/acme.json
+    networks:
+      - web
+      - internal
+
+  site1_db:
+    image: postgres:15
+    container_name: site1_db
     restart: always
     environment:
-      POSTGRES_DB: bytenest
-      POSTGRES_USER: bytenest
-      POSTGRES_PASSWORD: bytenest123
+      POSTGRES_DB: site1
+      POSTGRES_USER: site1_user
+      POSTGRES_PASSWORD: site1_pass
     volumes:
-      - bytenest_postgres_data:/var/lib/postgresql/data
+      - site1_postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  site1_web:
+    build: ./site1
+    container_name: site1_web
+    restart: always
+    environment:
+      DB_NAME: site1
+      DB_USER: site1_user
+      DB_PASSWORD: site1_pass
+      DB_HOST: site1_db
+      DB_PORT: 5432
+    depends_on:
+      - site1_db
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.site1.rule=Host(`site1.seudominio.com`)"
+      - "traefik.http.routers.site1.entrypoints=websecure"
+      - "traefik.http.routers.site1.tls.certresolver=letsencrypt"
+    networks:
+      - web
+      - internal
+
+  site2_db:
+    image: postgres:15
+    container_name: site2_db
+    restart: always
+    environment:
+      POSTGRES_DB: site2
+      POSTGRES_USER: site2_user
+      POSTGRES_PASSWORD: site2_pass
+    volumes:
+      - site2_postgres_data:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  site2_web:
+    build: ./site2
+    container_name: site2_web
+    restart: always
+    environment:
+      DB_NAME: site2
+      DB_USER: site2_user
+      DB_PASSWORD: site2_pass
+      DB_HOST: site2_db
+      DB_PORT: 5432
+    depends_on:
+      - site2_db
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.site2.rule=Host(`site2.seudominio.com`)"
+      - "traefik.http.routers.site2.entrypoints=websecure"
+      - "traefik.http.routers.site2.tls.certresolver=letsencrypt"
+    networks:
+      - web
+      - internal
 
 volumes:
-  bytenest_postgres_data:
+  site1_postgres_data:
+  site2_postgres_data:
